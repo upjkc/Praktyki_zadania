@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekt</title>
+    <script language="JavaScript">
+
+console.log("Zadania");
+
+
+    const zad9 = new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Udało się");
+        }, 5000);
+    });
+    zad9.then(res => {
+        console.log("Wynik zad9:    "+res)
+    });
+
+
+    function multiplyAsync(x,y) {
+    return new Promise((resolve, reject) => {
+        if ((typeof x !== "number") || (typeof y !=="number")){
+            reject("argument nie jest liczbą");
+        }
+            resolve(x*y);
+    });
+}
+    multiplyAsync(5,5).then(res => console.log("Wynik zad10:    "+res));
+    multiplyAsync(5,"awokado").catch(error => console.log("Error zad10:     "+error));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
