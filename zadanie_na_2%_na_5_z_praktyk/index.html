@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie na 2%</title>
+    <script language="JavaScript">
+
+    const showStory = () => fetch("https://hacker-news.firebaseio.com/v0/item/8863.json?print=pretty")
+	.then((response) => {
+		return response.json();
+	})
+	.then((Story) => {
+		console.log(Story);
+	});
+    showStory();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
